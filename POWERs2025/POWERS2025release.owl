@@ -15,10 +15,27 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/WP">
         <owl:imports rdf:resource="http://purl.obolibrary.org/Bionik/PATO_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2020/bfo.owl"/>
-        <dc:contributor>Dilek Yargan</dc:contributor>
+        <terms:contributor>Dilek Yargan</terms:contributor>
         <terms:contributor>Ludger Jansen</terms:contributor>
-        <terms:description>Proof-of-concept toy ontology for the implementation of the ontology design principles for knowledge about working principles (Paper submitted to POWERs).</terms:description>
+        <terms:description>Proof-of-concept ontology for the implementation of the ontology design patterns for the representation of working principles in engineering. This version has been released on the occasion of the presentation of the patterns at the JOWO-FOIS POWERs workshop in Catania, September 2025.</terms:description>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
 
 
@@ -63,6 +80,18 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0000052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000052"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000117 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000117"/>
+    
+
+
     <!-- http://www.semanticweb.org/WP#disposition_to_R -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/WP#disposition_to_R">
@@ -73,6 +102,7 @@
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/WP#process_type_R"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Placeholder class for a certain kind of disposition, namely the dispostion to R.</rdfs:comment>
     </owl:Class>
     
 
@@ -93,6 +123,7 @@
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/WP#process_type_T"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Placeholder class for a certain kind of disposition, namely the dispostion to R if triggered by T.</rdfs:comment>
     </owl:Class>
     
 
@@ -118,6 +149,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/WP#disposition_to_R"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Place holder class for the class of all objects with a certain shape x.</rdfs:comment>
     </owl:Class>
     
 
@@ -143,6 +175,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/WP#disposition_to_R"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Place holder class for the class of all objects with a certain size y.</rdfs:comment>
     </owl:Class>
     
 
@@ -172,6 +205,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/WP#disposition_to_R"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <skos:definition>An object xyz is a material entity of shape x, size y, consisting of material z.</skos:definition>
     </owl:Class>
     
 
@@ -180,6 +214,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/WP#portion_of_material">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:comment>The class is introduced for householding purposes, such that all &quot;portion of&quot; classes can be subsumed under it.</rdfs:comment>
+        <skos:definition>A portion of material is a material entity such that its identity depends only on the atoms or molecules present (whatever is the larger unit present), irrespective of size, shape, structure or kind membership of the whole portion.</skos:definition>
     </owl:Class>
     
 
@@ -202,6 +238,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/WP#process_type_R">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:comment>Placeholder class for a certain kind of process, R.</rdfs:comment>
     </owl:Class>
     
 
@@ -236,6 +273,7 @@
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/WP#disposition_to_R_when_T"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Placeholder class for a certain kind of process, R, triggered by T.</rdfs:comment>
     </owl:Class>
     
 
@@ -244,6 +282,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/WP#shape_x">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
+        <rdfs:comment>Placeholder class for a certain kind of shape, x.</rdfs:comment>
     </owl:Class>
     
 
@@ -252,6 +291,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/WP#shape_y">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
+        <rdfs:comment>Placeholder class for a certain kind of shape, y.</rdfs:comment>
     </owl:Class>
     
 
@@ -260,6 +300,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/WP#size_x">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000117"/>
+        <rdfs:comment>Placeholder class for a certain kind of size x.</rdfs:comment>
     </owl:Class>
     
 
@@ -268,6 +309,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/WP#size_z">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000117"/>
+        <rdfs:comment>Placeholder class for a certain kind of size z.</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 
